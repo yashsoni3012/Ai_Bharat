@@ -5,7 +5,7 @@ from sqlalchemy import create_engine, Column, String, Integer, Text, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from datetime import datetime
-import torch, os, tempfile, soundfile as sf, uuid, numpy as np, gc
+import torch, os, soundfile as sf, uuid, numpy as np, gc
 from transformers import pipeline, AutoTokenizer, AutoModelForSeq2SeqLM
 from parler_tts import ParlerTTSForConditionalGeneration
 
@@ -22,7 +22,8 @@ os.makedirs(DATASET_DIR, exist_ok=True)
 app.mount("/dataset", StaticFiles(directory=DATASET_DIR), name="dataset")
 
 # ---------------- PostgreSQL Database ---------------- #
-DATABASE_URL = "postgresql+psycopg://speech_to_speech_user:ubVTaqH1oFxs5sVeAnsIEKOa0ocnlFTD@dpg-d32054juibrs739dp65g-a:5432/speech_to_speech"
+DATABASE_URL = "postgresql+psycopg://speech_to_speech_vpai_user:8pvxCKbl1wdVYlXsOL0L0ZVKRHcxeTzk@dpg-d32j3qemcj7s739kku1g-a:5432/speech_to_speech_vpai"
+
 engine = create_engine(DATABASE_URL, echo=False)
 SessionLocal = sessionmaker(bind=engine)
 Base = declarative_base()
