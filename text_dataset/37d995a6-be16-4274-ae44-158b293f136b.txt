@@ -1,0 +1,2 @@
+Input (english): hello my name is Disha
+Translated (hindi): हैलो, मेरा नाम दिशा है ।

@@ -1,0 +1,2 @@
+Input (hindi): हैलो, मेरा नाम दिशा है ।
+Translated (english): हैलो मेरा नाम देश है ।
